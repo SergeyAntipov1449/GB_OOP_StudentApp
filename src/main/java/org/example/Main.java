@@ -1,5 +1,6 @@
 package org.example;
 
+import Domen.Person;
 import Domen.Student;
 import Domen.StudentGroup;
 import Domen.StudentStream;
@@ -7,6 +8,7 @@ import Domen.StudentStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -33,7 +35,7 @@ public class Main {
         /**
          * формирование групп студентов
          */
-        List<Student> listStud1 = new ArrayList<Student>();
+        List<Person> listStud1 = new ArrayList<>();
         listStud1.add(s1);
         listStud1.add(s2);
         listStud1.add(s3);
@@ -42,14 +44,14 @@ public class Main {
         listStud1.add(s6);
         listStud1.add(s7);
 
-        List<Student> listStud2 = new ArrayList<Student>();
+        List<Person> listStud2 = new ArrayList<>();
         listStud2.add(s8);
         listStud2.add(s9);
         listStud2.add(s10);
         listStud2.add(s11);
         listStud2.add(s12);
 
-        List<Student> listStud3 = new ArrayList<Student>();
+        List<Person> listStud3 = new ArrayList<>();
         listStud3.add(s13);
         listStud3.add(s14);
         listStud3.add(s15);
@@ -64,17 +66,17 @@ public class Main {
 
         System.out.println("******** ВЫВОД ГРУПП СО СПИСОК СТУДЕНТОВ ********");
         System.out.println("=================================================");
-        for (Student std : group4570) {
+        for (Person std : group4570) {
             System.out.println(std);
         }
         System.out.println("*************************************************");
 
-        for (Student std : group4580) {
+        for (Person std : group4580) {
             System.out.println(std);
         }
         System.out.println("*************************************************");
 
-        for (Student std : group4590) {
+        for (Person std : group4590) {
             System.out.println(std);
         }
         System.out.println("=================================================");

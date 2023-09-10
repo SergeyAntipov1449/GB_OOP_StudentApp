@@ -1,5 +1,7 @@
 package Domen;
 
+import java.util.Iterator;
+
 /**
  * @author Developer name
  * @version 1.0

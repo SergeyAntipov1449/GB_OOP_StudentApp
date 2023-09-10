@@ -9,8 +9,8 @@ import java.util.List;
  * @version 1.0
  * @apiNote Класс для описания группы студентов учебного заведения
  */
-public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup> {
-    private List<Student> group;
+public class StudentGroup implements Iterable<Person>, Comparable<StudentGroup> {
+    private List<Person> group;
     private Integer idGroup;
 
     /**
@@ -18,17 +18,17 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
      * @param idGroup идентификатор (номер) группы
      * @apiNote конструктор класса
      */
-    public StudentGroup(List<Student> group, Integer idGroup) {
+    public StudentGroup(List<Person> group, Integer idGroup) {
         this.group = group;
         this.idGroup = idGroup;
     }
 
-    public List<Student> getGroup() {
+    public List<Person> getGroup() {
 
         return group;
     }
 
-    public void setGroup(List<Student> group) {
+    public void setGroup(List<Person> group) {
 
         this.group = group;
     }
@@ -79,8 +79,8 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
     }
 
     @Override
-    public Iterator<Student> iterator() {
-        return new StudentIterator(group);
+    public Iterator<Person> iterator() {
+        return new PersonIterator(group);
     }
 
     /**
