@@ -2,6 +2,11 @@ package Domen;
 
 import java.util.Comparator;
 
+/**
+ * @apiNote Класса для сравнения участинов учебного заведения по имени
+ * @author Developer Name
+ * @version 1.0
+ */
 public class PersonComparator<T extends Person> implements Comparator<T> {
 
     @Override

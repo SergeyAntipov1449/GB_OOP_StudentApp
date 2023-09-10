@@ -1,9 +1,8 @@
 package org.example;
 
-import Domen.Person;
-import Domen.Student;
-import Domen.StudentGroup;
-import Domen.StudentStream;
+import Controllers.AccountController;
+import Domen.*;
+import Services.TeacherService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -173,6 +172,40 @@ public class Main {
 
         System.out.println("thirdStream = " + thirdStream);
         System.out.println("=================================================");
+        System.out.println("");
+
+        /**
+         * создаем список учителей
+         */
+        TeacherService tchCat = new TeacherService();
+        tchCat.create("Галина", 55);
+        tchCat.create("Татьяна", 57);
+        tchCat.create("Ольга", 35);
+        tchCat.create("Владимир", 62);
+        tchCat.create("Анатолий", 44);
+        tchCat.create("Николай", 40);
+
+
+        System.out.println("******** ВЫВОД СРЕДНЕГО ВОЗРАСТА СТУДЕНТОВ ********");
+        System.out.println("=================================================");
+        System.out.println("Срединй возврас студентов = " + AccountController.averageAge(listStud1));
+        System.out.println("=================================================");
+        System.out.println("");
+
+        System.out.println("******** ВЫВОД СРЕДНЕГО ВОЗРАСТА УЧИТЕЛЕЙ ********");
+        System.out.println("=================================================");
+        System.out.println("Срединй возврас студентов = " + AccountController.averageAge(tchCat.getAll()));
+        System.out.println("=================================================");
+        System.out.println("");
+
+        System.out.println("******** ВЫВОД СПИСКА УЧИТЕЛЕЙ С СОРТИРОВКОЙ ПО ИМЕНИ ********");
+        System.out.println("=================================================");
+        tchCat.printByName();
+        System.out.println("=================================================");
+        System.out.println("");
+
 
     }
+
+
 }
